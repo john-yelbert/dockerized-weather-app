@@ -1,0 +1,23 @@
+# Ignore .env file in the flask_backend subdirectory
+.env
+
+# Ignore cached python file in the flask_backend subdirectory
+__pycache__/
+*.pyc
+*.pyo
+*.pyd# Environment variables
+.env
+
+# Python cache / compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ignore flask instance folder (for configs, DBs etc.)
+instance/
+
+# ignore virtual environment 
+venv/
+.venv/
+
