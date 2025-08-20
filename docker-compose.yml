@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: weather-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - OPENWEATHER_API_KEY=${OPENWEATHER_API_KEY}
+
+  frontend:
+    build: ./frontend
+    container_name: weather-frontend
+    ports:
+      - "3000:80"
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000
+    depends_on:
+      - backend
