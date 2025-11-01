@@ -1,6 +1,6 @@
 # 🌤 Weather App (React + Flask + Docker Compose)
 
-A simple containerized weather app built with **React (frontend)** and **Flask (backend)**.  
+A simple containerized weather app built with **React (frontend)** and **Flask (backend)** **Nginx Reverse Proxy**.  
 The app fetches live weather data from the OpenWeather API.
 
 ---
@@ -10,8 +10,7 @@ The app fetches live weather data from the OpenWeather API.
 - Search weather by city name
 - Displays temperature, humidity, wind speed, and conditions
 - React frontend + Flask backend architecture
-- Dockerized for easy deployment
-- Ready for AWS EC2 deployment with Terraform (coming soon 🚀)
+- Dockerized for easy deployment.
 
 ---
 
@@ -39,7 +38,22 @@ weather-app/
 - Docker Compose
 - An OpenWeather API Key
 
-# ⚙️ Setup
+## ☁️Terraform (Infrastructure as Code (IaC) )
+
+This weather project was later deployed to AWS.
+The infrastructure provisioned with **Terraform**, ensuring reproducible, scalable deployments.
+
+Terraform handles:
+
+- VPC and subnet creation
+- Internet Gateway and route tables
+- Security groups
+- EC2 instance deployment
+
+👉 You can find the Terraform configuration in a separate repo here:  
+[Weather App Infra – Terraform](https://github.com/john-yelbert/weatherapp_terraform.git)
+
+# ⚙️ Setup Locally
 
 Clone the repo:
 
